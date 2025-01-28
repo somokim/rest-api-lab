@@ -1,4 +1,4 @@
-# Lab Project
+# Project
 
 This repository contains a lab environment designed to learn and practice various API hacking techniques. Whether you’re a student, security researcher, or developer, this lab provides a hands-on approach to understanding potential vulnerabilities in APIs.
 
