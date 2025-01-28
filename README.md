@@ -22,3 +22,8 @@ node dist/main.js
 ```
 **The Lab is running on port 3000**
 
+### 4. Access to Lab
+```bash
+http://localhost:3000/
+```
+
