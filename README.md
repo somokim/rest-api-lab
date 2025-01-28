@@ -9,13 +9,16 @@ This repository contains a lab environment designed to learn and practice variou
 **Using Git (Recommended)**:
 ```bash
 git clone https://github.com/somokim/rest-api-lab.git
+```
 
 ### 2. Navigate to the Project Directory
 ```bash
 cd rest-api-lab/backend
+```
 
 ### 3. Run the Lab
 ```bash
 node dist/main.js
+```
 **The Lab is running on port 3000**
 
