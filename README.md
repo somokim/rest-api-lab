@@ -8,4 +8,4 @@ This repository contains a lab environment designed to learn and practice variou
 
 **Using Git (Recommended)**:
 ```bash
-git clone https://github.com/YourUsername/YourLabProject.git
+git clone https://github.com/somokim/rest-api-lab.git
