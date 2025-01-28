@@ -1,0 +1,556 @@
+{
+    "openapi": "3.0.0",
+    "paths": {
+      "/api/v1/customer": {
+        "post": {
+          "operationId": "CustomerController_create",
+          "summary": "Create new customer user",
+          "parameters": [],
+          "requestBody": {
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateCustomerDto"
+                }
+              }
+            }
+          },
+          "responses": {
+            "201": {
+              "description": ""
+            }
+          },
+          "tags": [
+            "Customer"
+          ]
+        },
+        "get": {
+          "operationId": "CustomerController_findAll",
+          "parameters": [],
+          "responses": {
+            "200": {
+              "description": ""
+            }
+          },
+          "tags": [
+            "Customer"
+          ]
+        }
+      },
+      "/api/v1/customer/{id}": {
+        "get": {
+          "operationId": "CustomerController_findOne",
+          "parameters": [
+            {
+              "name": "id",
+              "required": true,
+              "in": "path",
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": ""
+            }
+          },
+          "tags": [
+            "Customer"
+          ]
+        },
+        "patch": {
+          "operationId": "CustomerController_update",
+          "summary": "Create new customer user",
+          "parameters": [
+            {
+              "name": "id",
+              "required": true,
+              "in": "path",
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "requestBody": {
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpdateCustomerDto"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": ""
+            }
+          },
+          "tags": [
+            "Customer"
+          ]
+        },
+        "delete": {
+          "operationId": "CustomerController_remove",
+          "parameters": [
+            {
+              "name": "id",
+              "required": true,
+              "in": "path",
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": ""
+            }
+          },
+          "tags": [
+            "Customer"
+          ]
+        }
+      },
+      "/api/v1/product": {
+        "post": {
+          "operationId": "ProductController_create",
+          "summary": "Create new product",
+          "parameters": [],
+          "requestBody": {
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateProductDto"
+                }
+              }
+            }
+          },
+          "responses": {
+            "201": {
+              "description": ""
+            }
+          },
+          "tags": [
+            "Product"
+          ]
+        },
+        "get": {
+          "operationId": "ProductController_findAll",
+          "parameters": [],
+          "responses": {
+            "200": {
+              "description": ""
+            }
+          },
+          "tags": [
+            "Product"
+          ]
+        }
+      },
+      "/api/v1/product/search": {
+        "get": {
+          "operationId": "ProductController_search",
+          "parameters": [
+            {
+              "name": "q",
+              "required": true,
+              "in": "query",
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": ""
+            }
+          },
+          "tags": [
+            "Product"
+          ]
+        }
+      },
+      "/api/v1/product/{id}": {
+        "get": {
+          "operationId": "ProductController_findOne",
+          "parameters": [
+            {
+              "name": "id",
+              "required": true,
+              "in": "path",
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": ""
+            }
+          },
+          "tags": [
+            "Product"
+          ]
+        }
+      },
+      "/api/v1/product/upload": {
+        "post": {
+          "operationId": "ProductController_uploadFile",
+          "parameters": [],
+          "responses": {
+            "201": {
+              "description": ""
+            }
+          },
+          "tags": [
+            "Product"
+          ]
+        }
+      },
+      "/api/v1/cart": {
+        "post": {
+          "operationId": "CartController_create",
+          "summary": "Create new admin user",
+          "parameters": [],
+          "requestBody": {
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateCartDto"
+                }
+              }
+            }
+          },
+          "responses": {
+            "201": {
+              "description": ""
+            }
+          },
+          "tags": [
+            "Cart"
+          ]
+        }
+      },
+      "/api/v1/cart/{id}": {
+        "get": {
+          "operationId": "CartController_findAll",
+          "parameters": [
+            {
+              "name": "id",
+              "required": true,
+              "in": "path",
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": ""
+            }
+          },
+          "tags": [
+            "Cart"
+          ]
+        },
+        "patch": {
+          "operationId": "CartController_update",
+          "summary": "Create new admin user",
+          "parameters": [
+            {
+              "name": "id",
+              "required": true,
+              "in": "path",
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "requestBody": {
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpdateCartDto"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": ""
+            }
+          },
+          "tags": [
+            "Cart"
+          ]
+        },
+        "delete": {
+          "operationId": "CartController_remove",
+          "parameters": [
+            {
+              "name": "id",
+              "required": true,
+              "in": "path",
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": ""
+            }
+          },
+          "tags": [
+            "Cart"
+          ]
+        }
+      },
+      "/api/v1/order": {
+        "post": {
+          "operationId": "OrderController_create",
+          "summary": "Create new order",
+          "parameters": [],
+          "requestBody": {
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateOrderDto"
+                }
+              }
+            }
+          },
+          "responses": {
+            "201": {
+              "description": ""
+            }
+          },
+          "tags": [
+            "Order"
+          ]
+        }
+      },
+      "/api/v1/auth/login": {
+        "post": {
+          "operationId": "AuthController_login",
+          "summary": "User login",
+          "parameters": [],
+          "requestBody": {
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Authenticate"
+                }
+              }
+            }
+          },
+          "responses": {
+            "201": {
+              "description": ""
+            }
+          },
+          "tags": [
+            "Auth"
+          ]
+        }
+      }
+    },
+    "info": {
+      "title": "API Documentation",
+      "description": "API documentation for Express Ecommerce",
+      "version": "1.0",
+      "contact": {}
+    },
+    "tags": [],
+    "servers": [],
+    "components": {
+      "schemas": {
+        "CreateCustomerDto": {
+          "type": "object",
+          "properties": {
+            "firstName": {
+              "type": "string"
+            },
+            "lastName": {
+              "type": "string"
+            },
+            "email": {
+              "type": "string"
+            },
+            "password": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "firstName",
+            "lastName",
+            "email",
+            "password"
+          ]
+        },
+        "UpdateCustomerDto": {
+          "type": "object",
+          "properties": {
+            "firstName": {
+              "type": "string"
+            },
+            "lastName": {
+              "type": "string"
+            },
+            "email": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "firstName",
+            "lastName",
+            "email"
+          ]
+        },
+        "CreateProductDto": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "price": {
+              "type": "number"
+            },
+            "stock": {
+              "type": "number"
+            },
+            "imageUrl": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "description",
+            "price",
+            "stock",
+            "imageUrl"
+          ]
+        },
+        "UpdateProductDto": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "price": {
+              "type": "number"
+            },
+            "stock": {
+              "type": "number"
+            },
+            "imageUrl": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "description",
+            "price",
+            "stock",
+            "imageUrl"
+          ]
+        },
+        "CreateCartDto": {
+          "type": "object",
+          "properties": {
+            "customer": {
+              "type": "number"
+            },
+            "product": {
+              "type": "number"
+            },
+            "quantity": {
+              "type": "number"
+            },
+            "price": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "customer",
+            "product",
+            "quantity",
+            "price"
+          ]
+        },
+        "UpdateCartDto": {
+          "type": "object",
+          "properties": {
+            "customer": {
+              "type": "number"
+            },
+            "product": {
+              "type": "number"
+            },
+            "quantity": {
+              "type": "number"
+            },
+            "price": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "customer",
+            "product",
+            "quantity",
+            "price"
+          ]
+        },
+        "CreateOrderDto": {
+          "type": "object",
+          "properties": {
+            "customer": {
+              "type": "number"
+            },
+            "delivery_service": {
+              "type": "string"
+            },
+            "address": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "customer",
+            "delivery_service",
+            "address"
+          ]
+        },
+        "Authenticate": {
+          "type": "object",
+          "properties": {
+            "username": {
+              "type": "string",
+              "description": "Username"
+            },
+            "password": {
+              "type": "string",
+              "description": "Password"
+            }
+          },
+          "required": [
+            "username",
+            "password"
+          ]
+        }
+      }
+    }
+  }
